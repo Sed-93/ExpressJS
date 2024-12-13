@@ -1,17 +1,17 @@
-# Använd Node.js-bild
+# Använd Node.js officiell bild
 FROM node:18
 
-# Sätt arbetskatalogen
+# Sätt arbetskatalog
 WORKDIR /app
 
-# Kopiera projektets filer
+# Kopiera projektfiler
 COPY package*.json ./
 COPY . .
 
 # Installera beroenden
 RUN npm install
 
-# Exponera porten
+# Exponera port
 EXPOSE 3000
 
 # Starta applikationen

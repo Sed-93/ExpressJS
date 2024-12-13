@@ -1,8 +1,9 @@
+require('dotenv').config(); // För att läsa miljövariabler
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware för att hantera JSON
+// Middleware för JSON-hantering
 app.use(express.json());
 
 // En enkel route
@@ -14,5 +15,3 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
-
-
